@@ -1,0 +1,219 @@
+﻿/* =========================================
+   AI CAREERS PAGE
+   AI Learning Hub
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #F5F7FC;
+    color: #172033;
+    line-height: 1.7;
+}
+
+/* Navigation */
+nav {
+    background: #101B3D;
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav h2 {
+    font-size: 22px;
+}
+
+nav div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: #DCE5F7;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #93C5FD;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #101B3D, #2563EB);
+    color: white;
+    text-align: center;
+    padding: 85px 20px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 45px);
+    line-height: 1.2;
+    max-width: 850px;
+    margin: 0 auto 20px;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #E0EAFE;
+    font-size: 17px;
+}
+
+/* Main Containers */
+.container {
+    width: min(90%, 1150px);
+    margin: 0 auto;
+    padding: 55px 0;
+}
+
+/* Section Titles */
+.section-title {
+    color: #101B3D;
+    font-size: clamp(25px, 3vw, 32px);
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* Cards Grid */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* Individual Cards */
+.card {
+    background: white;
+    padding: 27px;
+    border-radius: 13px;
+    border: 1px solid #E2E8F0;
+    border-top: 4px solid #2563EB;
+    box-shadow: 0 5px 18px rgba(16, 27, 61, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(16, 27, 61, 0.10);
+}
+
+.card h3 {
+    color: #1D3B70;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #64748B;
+    font-size: 14px;
+}
+
+/* Learning Roadmap */
+.roadmap {
+    background: white;
+    padding: 30px 35px;
+    border-radius: 13px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 5px 18px rgba(16, 27, 61, 0.05);
+}
+
+.roadmap ol {
+    padding-left: 25px;
+}
+
+.roadmap li {
+    color: #334155;
+    padding: 10px 5px;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.roadmap li:last-child {
+    border-bottom: none;
+}
+
+.roadmap li::marker {
+    color: #2563EB;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #101B3D;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+footer p {
+    color: #CBD5E1;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 850px) {
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav div {
+        justify-content: center;
+        gap: 12px 16px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 60px 18px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .container {
+        width: 92%;
+        padding: 38px 0;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .roadmap {
+        padding: 22px;
+    }
+}
